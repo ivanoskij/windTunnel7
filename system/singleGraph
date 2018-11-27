@@ -1,0 +1,209 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     |
+    \\  /    A nd           | Web:      www.OpenFOAM.org
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+Description
+    Writes graph data for specified fields along a line, specified by start
+    and end points.
+
+\*---------------------------------------------------------------------------*/
+
+//windTunnel7
+
+///////////////////////////////////////////////////////////
+
+#includeEtc "caseDicts/postProcessing/graphs/sampleDict.cfg"
+
+type           	 	sets;
+libs            	("libsampling.so");
+writeControl    	writeTime;
+interpolationScheme 	cellPoint;
+setFormat   		raw;
+fields  		(W0,W1,W2,W3,W4,W5,W6,W7,W8,W9);
+
+setConfig
+{
+    type    uniform;
+    axis    distance;  
+    nPoints 300;
+}
+
+sets
+(
+///////////////////////////////////////////////////////////
+    lineA1
+    {
+        $setConfig;
+        start (3 0 0.25);
+        end   (3 3 0.25);
+    }
+    lineA2
+    {
+        $setConfig;
+        start (3 0 0.5);
+        end   (3 3 0.5);
+    }
+    lineA3
+    {
+        $setConfig;
+        start (3 0 0.75);
+        end   (3 3 0.75);
+    }
+    lineA4
+    {
+        $setConfig;
+        start (3 0 1);
+        end   (3 3 1);
+    }
+    lineA5
+    {
+        $setConfig;
+        start (3 0 1.25);
+        end   (3 3 1.25);
+    }
+    lineA6
+    {
+        $setConfig;
+        start (3 0 1.5);
+        end   (3 3 1.5);
+    }
+    lineA7
+    {
+        $setConfig;
+        start (3 0 1.75);
+        end   (3 3 1.75);
+    }
+///////////////////////////////////////////////////////////
+    lineB1
+    {
+        $setConfig;
+        start (4.9 0 0.25);
+        end   (4.9 3 0.25);
+    }
+    lineB2
+    {
+        $setConfig;
+        start (4.9 0 0.5);
+        end   (4.9 3 0.5);
+    }
+    lineB3
+    {
+        $setConfig;
+        start (4.9 0 0.75);
+        end   (4.9 3 0.75);
+    }
+    lineB4
+    {
+        $setConfig;
+        start (4.9 0 1);
+        end   (4.9 3 1);
+    }
+    lineB5
+    {
+        $setConfig;
+        start (4.9 0 1.25);
+        end   (4.9 3 1.25);
+    }
+    lineB6
+    {
+        $setConfig;
+        start (4.9 0 1.5);
+        end   (4.9 3 1.5);
+    }
+    lineB7
+    {
+        $setConfig;
+        start (4.9 0 1.75);
+        end   (4.9 3 1.75);
+    }
+///////////////////////////////////////////////////////////
+    lineC1
+    {
+        $setConfig;
+        start (6.8 0 0.25);
+        end   (6.8 3 0.25);
+    }
+    lineC2
+    {
+        $setConfig;
+        start (6.8 0 0.5);
+        end   (6.8 3 0.5);
+    }
+    lineC3
+    {
+        $setConfig;
+        start (6.8 0 0.75);
+        end   (6.8 3 0.75);
+    }
+    lineC4
+    {
+        $setConfig;
+        start (6.8 0 1);
+        end   (6.8 3 1);
+    }
+    lineC5
+    {
+        $setConfig;
+        start (6.8 0 1.25);
+        end   (6.8 3 1.25);
+    }
+    lineC6
+    {
+        $setConfig;
+        start (6.8 0 1.5);
+        end   (6.8 3 1.5);
+    }
+    lineC7
+    {
+        $setConfig;
+        start (6.8 0 1.75);
+        end   (6.8 3 1.75);
+    }
+///////////////////////////////////////////////////////////
+    lineD1
+    {
+        $setConfig;
+        start (8.7 0 0.25);
+        end   (8.7 3 0.25);
+    }
+    lineD2
+    {
+        $setConfig;
+        start (8.7 0 0.5);
+        end   (8.7 3 0.5);
+    }
+    lineD3
+    {
+        $setConfig;
+        start (8.7 0 0.75);
+        end   (8.7 3 0.75);
+    }
+    lineD4
+    {
+        $setConfig;
+        start (8.7 0 1);
+        end   (8.7 3 1);
+    }
+    lineD5
+    {
+        $setConfig;
+        start (8.7 0 1.25);
+        end   (8.7 3 1.25);
+    }
+    lineD6
+    {
+        $setConfig;
+        start (8.7 0 1.5);
+        end   (8.7 3 1.5);
+    }
+    lineD7
+    {
+        $setConfig;
+        start (8.7 0 1.75);
+        end   (8.7 3 1.75);
+    }
+);
+// ************************************************************************* //

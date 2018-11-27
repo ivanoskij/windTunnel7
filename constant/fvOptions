@@ -1,0 +1,46 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  5                                     |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      fvOptions;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+//windTunnel3D
+
+//patch no2
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+sourceW_fvOPT
+{
+    type            scalarSemiImplicitSource;	
+    active          true;
+    timeStart       2;
+    duration        10;
+    selectionMode   cellSet; 	//OPTIONS: 'all', 'cellSet', 'cellZone', 'points'
+    cellSet         sourceWset;
+    fields 	    (W);
+    volumeMode      absolute;	//OPTIONS: 'absolute' (scalar units, e.g. [kg]), 'specific' (salar units, e.g. [kg/m3])
+    injectionRateSuSp 
+	{
+	 W (8.43e-3 0); 	// two coefficients needed (<scalarValue> <0>) // [units/s]
+	}
+}
+*/
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "scalarSourceW"
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// ************************************************************************* //
